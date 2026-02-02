@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2026 at 07:06 AM
+-- Generation Time: Feb 02, 2026 at 05:49 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -166,10 +166,10 @@ CREATE TABLE `staff` (
   `firstName` varchar(50) DEFAULT NULL,
   `lastName` varchar(50) DEFAULT NULL,
   `name` varchar(30) DEFAULT NULL,
-  `address` varchar(30) DEFAULT NULL,
+  `address` varchar(120) DEFAULT NULL,
   `dateOfBirth` date DEFAULT NULL,
-  `email` varchar(30) NOT NULL,
-  `mob` varchar(10) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `mob` varchar(15) DEFAULT NULL,
   `passwordHash` varchar(255) NOT NULL DEFAULT '',
   `roleID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -223,6 +223,7 @@ ALTER TABLE `rosterrole`
 --
 ALTER TABLE `staff`
   ADD PRIMARY KEY (`staffID`),
+  ADD UNIQUE KEY `ux_staff_email` (`email`),
   ADD KEY `idx_staff_email` (`email`),
   ADD KEY `fk_staff_role` (`roleID`);
 
@@ -235,6 +236,12 @@ ALTER TABLE `staff`
 --
 ALTER TABLE `availability`
   MODIFY `availabilityID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `role`
+--
+ALTER TABLE `role`
+  MODIFY `roleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `roster`
@@ -262,15 +269,15 @@ ALTER TABLE `staff`
 -- Constraints for table `availability`
 --
 ALTER TABLE `availability`
-  ADD CONSTRAINT `fk_availability_roster` FOREIGN KEY (`rosterID`) REFERENCES `roster` (`rosterID`),
-  ADD CONSTRAINT `fk_availability_staff` FOREIGN KEY (`staffID`) REFERENCES `staff` (`staffID`);
+  ADD CONSTRAINT `fk_availability_roster` FOREIGN KEY (`rosterID`) REFERENCES `roster` (`rosterID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_availability_staff` FOREIGN KEY (`staffID`) REFERENCES `staff` (`staffID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `rosterrole`
 --
 ALTER TABLE `rosterrole`
-  ADD CONSTRAINT `fk_rosterrole_role` FOREIGN KEY (`roleID`) REFERENCES `role` (`roleID`),
-  ADD CONSTRAINT `fk_rosterrole_roster` FOREIGN KEY (`rosterID`) REFERENCES `roster` (`rosterID`);
+  ADD CONSTRAINT `fk_rosterrole_role` FOREIGN KEY (`roleID`) REFERENCES `role` (`roleID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_rosterrole_roster` FOREIGN KEY (`rosterID`) REFERENCES `roster` (`rosterID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `staff`
