@@ -56,6 +56,61 @@ The database was designed following relational database best practices.
 
 The full database schema and sample data are included in:
 
+database/fastfood_klc.sql
 
-## Author
-Kenny Luis Colliard
+---
+
+## 📁 Project Structure
+anthony-fastfood-fms/
+├── src/ # PHP application source code
+├── database/ # SQL schema and sample data
+├── screenshots/ # Application and database screenshots
+└── README.md
+
+
+---
+
+## ▶️ Running the Project Locally (Optional)
+This project was developed and tested locally using **XAMPP**.
+
+If you would like to run the system locally:
+
+1. Install **XAMPP**
+2. Copy the project into:
+xampp/htdocs/anthony-fastfood-fms
+
+3. Start **Apache** and **MySQL**
+4. Create a database named:
+fastfood_klc
+
+5. Import:
+database/fastfood_klc.sql
+
+6. Open in your browser:
+http://localhost/anthony-fastfood-fms/src/login.php
+
+
+This step is **not required** to understand the project but is provided for technical completeness.
+
+---
+
+## 🧪 Technologies Used
+- PHP
+- MySQL
+- SQL
+- HTML / CSS
+- XAMPP (local development environment)
+
+---
+
+## 👤 Author
+**Kenny Colliard**  
+Junior Data Analyst | IT & Data Systems  
+
+This project is part of my professional portfolio and focuses on **clear design decisions, realistic data modeling, and practical backend development**.
+
+---
+
+## ⚠️ Disclaimer
+This project was developed for educational and portfolio purposes.  
+All users and data included are **sample/dummy data**.
