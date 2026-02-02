@@ -78,9 +78,6 @@ anthony-fastfood-fms/
 ### Availability Management
 ![Availability](screenshots/availability.jpg)
 
-### Roster Management
-![Roster](screenshots/roster.jpg)
-
 ### Create Staff
 ![Create Staff](screenshots/create-staff.jpg)
 
