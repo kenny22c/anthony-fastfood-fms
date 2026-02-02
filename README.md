@@ -1,120 +1,136 @@
-# Anthony Fastfood FMS  
-**Full Stack Staff Management System (PHP & MySQL)**
+# Anthony’s Fast Food – Management System (FMS)
 
-A full-stack staff management system developed as part of the **Diploma of Information Technology (Database Management)**.  
-This project focuses on **database design, data integrity, and practical backend development**, rather than UI polish.
+A full stack **staff and roster management system** developed using **PHP and MySQL** as part of the *Diploma of Information Technology (Database Management)*.
 
----
-
-## 📌 Project Overview
-Anthony Fastfood FMS is a database-driven web application designed to manage **staff records, roles, rosters, and staff availability** in a small business environment.
-
-The goal of this project was to design and implement a **realistic relational database** and connect it to a working backend system using PHP and MySQL.
+This project demonstrates practical skills in **database design, relational integrity, backend development, and system documentation**, focusing on real-world business requirements rather than theoretical examples.
 
 ---
 
-## 🧠 What This Project Demonstrates
-- Relational database design and normalization
-- Use of **primary keys, foreign keys, and constraints**
-- Data integrity with **ON DELETE CASCADE**
-- Role-based logic and structured backend development
-- Practical PHP–MySQL integration
-- Clear technical documentation
+## 🧩 Project Overview
+
+The system was designed to support a fast-food business by managing:
+
+- Staff records
+- Roles and permissions
+- Rosters and shifts
+- Staff availability
+- Secure authentication
+- Data integrity through relational constraints
+
+The application integrates a relational database with a PHP-based web interface to support operational decision-making and daily staff management.
 
 ---
 
-## 🖥️ Application Preview
-Screenshots of the system are available in the `screenshots/` folder, including:
-- Login screen
-- Dashboard
-- Staff management interface
-- Availability selection
-- Database schema (phpMyAdmin)
+## 🛠️ Technologies Used
 
-These screenshots provide a quick overview of the system without requiring setup.
+- **PHP** – server-side logic
+- **MySQL** – relational database
+- **phpMyAdmin** – database management
+- **HTML / CSS** – basic interface
+- **XAMPP** – local development environment
 
 ---
 
-## 🗄️ Database Design
-The database was designed following relational database best practices.
+## 🧠 Key Design Decisions
 
-### Core Tables
-- `staff`
-- `role`
-- `roster`
-- `rosterrole`
-- `availability`
-
-### Key Design Decisions
-- **AUTO_INCREMENT primary keys**
-- **Foreign keys with cascading rules** to prevent orphan records
+- **AUTO_INCREMENT primary keys** for all core tables  
+- **Foreign keys with cascading rules** to prevent orphan records  
 - **Unique constraints**, including:
   - Unique staff email
   - Unique staff availability per roster
   - Unique role per roster
-- Passwords stored as **hashed values**
+- **Passwords stored as hashed values**
+- Separation of concerns between database, logic, and presentation
 
 The full database schema and sample data are included in:
 
 database/fastfood_klc.sql
+
 
 ---
 
 ## 📁 Project Structure
 
 anthony-fastfood-fms/
-
 ├── src/ # PHP application source code
-
 ├── database/ # SQL schema and sample data
-
 ├── screenshots/ # Application and database screenshots
-
 └── README.md
+
+
+---
+
+## 📸 Screenshots
+
+### Database Schema
+![Database Schema](screenshots/db-schema.jpg)
+
+### Login & Authentication
+![Login](screenshots/login.jpg)
+
+### Staff Management
+![Staff List](screenshots/staff-list.jpg)
+
+### Availability Management
+![Availability](screenshots/availability.jpg)
+
+### Roster Management
+![Roster](screenshots/roster.jpg)
+
+### Create Staff
+![Create Staff](screenshots/create-staff.jpg)
 
 ---
 
 ## ▶️ Running the Project Locally (Optional)
+
 This project was developed and tested locally using **XAMPP**.
 
 If you would like to run the system locally:
 
 1. Install **XAMPP**
-2. Copy the project into:
-xampp/htdocs/anthony-fastfood-fms
+2. Start **Apache** and **MySQL**
+3. Import the database:
+   - Open phpMyAdmin
+   - Create a database named `fastfood_klc`
+   - Import `database/fastfood_klc.sql`
+4. Place the contents of the `src/` folder inside:
+htdocs/
 
-3. Start **Apache** and **MySQL**
-4. Create a database named:
-fastfood_klc
+5. Update database connection settings if required
+6. Access the application via:
+http://localhost/
 
-5. Import:
-database/fastfood_klc.sql
-
-6. Open in your browser:
-http://localhost/anthony-fastfood-fms/src/login.php
-
-
-This step is **not required** to understand the project but is provided for technical completeness.
 
 ---
 
-## 🧪 Technologies Used
-- PHP
-- MySQL
-- SQL
-- HTML / CSS
-- XAMPP (local development environment)
+## 📦 Source Code
+
+The full PHP application source code is available in the `src/` directory.
+
+For convenience, a compressed version of the source code is also provided:
+
+- `anthony-fastfood-fms-source.zip`
+
+This allows reviewers to quickly download and inspect the application without cloning the repository.
+
+---
+
+## 📚 What I Learned
+
+Through this project, I strengthened my understanding of:
+
+- Relational database design and normalization
+- Foreign keys, cascading rules, and data integrity
+- Backend logic using PHP
+- Connecting web applications to databases
+- Structuring and documenting a complete IT project
 
 ---
 
 ## 👤 Author
+
 **Kenny Colliard**  
 Junior Data Analyst | IT & Data Systems  
 
-This project is part of my professional portfolio and focuses on **clear design decisions, realistic data modeling, and practical backend development**.
-
----
-
-## ⚠️ Disclaimer
-This project was developed for educational and portfolio purposes.  
-All users and data included are **sample/dummy data**.
+This project is part of my professional portfolio and reflects my interest in **data, IT systems, and practical, real-world applications**.
