@@ -63,9 +63,13 @@ database/fastfood_klc.sql
 ## 📁 Project Structure
 
 anthony-fastfood-fms/
+
 ├── src/ # PHP application source code
+
 ├── database/ # SQL schema and sample data
+
 ├── screenshots/ # Application and database screenshots
+
 └── README.md
 
 ---
