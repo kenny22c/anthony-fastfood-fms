@@ -1,35 +1,61 @@
-# Anthony Fastfood FMS
+# Anthony Fastfood FMS  
+**Full Stack Staff Management System (PHP & MySQL)**
 
-Full Stack staff management system developed as part of the Diploma of IT (Database Management).
+A full-stack staff management system developed as part of the **Diploma of Information Technology (Database Management)**.  
+This project focuses on **database design, data integrity, and practical backend development**, rather than UI polish.
 
-## Overview
-Anthony Fastfood FMS is a database-driven web application designed to manage staff records, roles, availability, and rostering for a small business environment.
+---
 
-The system includes authentication, role-based access, CRUD operations, and reporting capabilities.
+## 📌 Project Overview
+Anthony Fastfood FMS is a database-driven web application designed to manage **staff records, roles, rosters, and staff availability** in a small business environment.
 
-## Features
-- User authentication and session management
-- Role-based access control (Staff / Supervisor / Manager)
-- Staff management (create, edit, delete)
-- Staff availability management
-- Relational database design with multiple related tables
-- SQL queries and reporting
+The goal of this project was to design and implement a **realistic relational database** and connect it to a working backend system using PHP and MySQL.
 
-## Technologies
-- PHP
-- MySQL
-- SQL
-- HTML / CSS
-- XAMPP (local development environment)
+---
 
-## Database
-The system uses a relational MySQL database designed to support staff, roles, rosters, and availability using foreign key relationships.
+## 🧠 What This Project Demonstrates
+- Relational database design and normalization
+- Use of **primary keys, foreign keys, and constraints**
+- Data integrity with **ON DELETE CASCADE**
+- Role-based logic and structured backend development
+- Practical PHP–MySQL integration
+- Clear technical documentation
 
-## Deployment
-This project was developed and deployed locally using XAMPP for development and testing purposes.
+---
 
-## Screenshots
-Screenshots of the database schema and web interface are available in the `/screenshots` folder.
+## 🖥️ Application Preview
+Screenshots of the system are available in the `screenshots/` folder, including:
+- Login screen
+- Dashboard
+- Staff management interface
+- Availability selection
+- Database schema (phpMyAdmin)
+
+These screenshots provide a quick overview of the system without requiring setup.
+
+---
+
+## 🗄️ Database Design
+The database was designed following relational database best practices.
+
+### Core Tables
+- `staff`
+- `role`
+- `roster`
+- `rosterrole`
+- `availability`
+
+### Key Design Decisions
+- **AUTO_INCREMENT primary keys**
+- **Foreign keys with cascading rules** to prevent orphan records
+- **Unique constraints**, including:
+  - Unique staff email
+  - Unique staff availability per roster
+  - Unique role per roster
+- Passwords stored as **hashed values**
+
+The full database schema and sample data are included in:
+
 
 ## Author
-Kenny Colliard
+Kenny Luis Colliard
